@@ -1,0 +1,54 @@
+.not-found-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(at 50% -20%, #908392, #0d060e) fixed;
+
+  .not-found__content {
+    width: 70%;
+
+    #zero {
+      transform-box: fill-box;
+      transform-origin: bottom;
+    }
+
+    #handboy {
+      transform-box: fill-box;
+      transform-origin: 98% 98%;
+      animation: swing ease-in-out 1.3s infinite alternate;
+    }
+
+    #girllight {
+      transform-box: fill-box;
+      transform-origin: 0% 97%;
+      animation: swing ease-in-out 1.3s infinite alternate;
+    }
+
+    #hairgirl {
+      transform-box: fill-box;
+      transform-origin: 60% 0%;
+      animation: swingHair ease-in-out 1.3s infinite alternate;
+    }
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes swingHair {
+  0% {
+    transform: rotate(6deg);
+  }
+
+  100% {
+    transform: rotate(-6deg);
+  }
+}

@@ -1,0 +1,13 @@
+.account-container {
+  .account__header-background {
+    height: 300px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: 50%;
+    box-shadow: 0 20px 27px rgb(0 0 0 / 5%);
+  }
+
+  .account__header-avatar {
+    margin: -53px 24px 24px;
+  }
+}
