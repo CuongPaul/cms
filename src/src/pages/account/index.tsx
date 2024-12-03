@@ -183,7 +183,8 @@ const Security = () => {
   });
 
   const handleClickOk = (values: { ids: string[]; password: string }): void => {
-    if (selectedRows.length) mutate({ ...values, ids: selectedRows });
+    if (selectedRows.length)
+      mutate({ requestData: { ...values, ids: selectedRows } });
   };
 
   const columns: Array<ProColumns> = [
