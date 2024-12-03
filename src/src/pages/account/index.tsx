@@ -170,7 +170,7 @@ const Security = () => {
   const { data, isLoading } = useQuery({
     queryKey: ["findAllSessions", query],
     queryFn: () =>
-      fakeApi(query, { responseData: findAllSessionsFakeData }) as any,
+      fakeApi({requestData: query, responseData: findAllSessionsFakeData }) as any,
   });
 
   const { mutate, isPending } = useMutation({

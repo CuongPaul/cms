@@ -1,14 +1,13 @@
 const fakeApi = (
-  requestData?: any,
-  options?: { time?: number; responseData?: any; errorMessage?: string }
+  options?: { time?: number; isError?: boolean; requestData?: any; responseData?: any }
 ) => {
-  const { time = 2000, responseData, errorMessage } = options || {};
+  const { isError, time = 2000, requestData, responseData } = options || {};
 
   requestData && console.log("requestData: ", requestData);
 
   return new Promise((resolve, reject) =>
     setTimeout(() => {
-      return errorMessage
+      return isError
         ? reject("An error occurred")
         : responseData
         ? resolve(responseData)
